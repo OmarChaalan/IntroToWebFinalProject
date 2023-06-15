@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      header {
+        background-color: gray;
+        color: white;
+        display: inline-block;
+        width: 100%;
+        position: sticky;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: grey;
+        z-index: 1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: black;
+      }
+
+      footer {
+        background-color: grey;
+        position: sticky;
+        bottom: 0%;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+      }
+
+      fieldset {
+        width: 30%;
+      }
+    </style>
+
+    <header>
+      <h2 style="margin-left: 7.5px; display: inline-block; color: black">
+        My Website
+      </h2>
+      <h3 style="margin-left: 7.5px; display: inline-block; color: black">
+        <a href="MyWebsite.html" style="color: black; text-decoration: none"
+          >Home</a
+        >
+      </h3>
+      <div class="dropdown">
+        <h3 style="margin-left: 7.5px; display: inline-block; color: white">
+          Link
+        </h3>
+        <div class="dropdown-content">
+          <a href="MyInformation.html">Personal Info</a>
+          <a href="SocialMedia.html">My Social Media</a>
+          <a href="UnitConverter.html">Converter</a>
+          <a href="DiceGame.html">Dice Game</a>
+        </div>
+      </div>
+    </header>
+  </head>
+  <body>
+    <h1>Tell us who you are in order to play!</h1>
+    <fieldset>
+      <legend>User Info:</legend>
+      <form action="" id="myform">
+        <label for="name">Name: </label>
+        <input type="text" placeholder="Name" id="name" required />
+        <br />
+        <br />
+        <label for="email">Email: </label>
+        <input type="email" placeholder="Email" id="email" required />
+        <button type="submit">Submit</button>
+      </form>
+    </fieldset>
+    <h2>Roll The Dice! Try and get a number higher than 7 and YOU WIN!</h2>
+    <button id="guessbutton" disabled>Roll</button>
+    <p>Attempts Remaining: <span id="attemptsnumber"></span></p>
+
+    <p>First Die: <img id="Die1" /></p>
+
+    <p>Second Die: <img id="Die2" /></p>
+
+    <h3 id="displayresult"></h3>
+    <script src="DiceGame.js"></script>
+
+    <footer>
+      <h5>&copy; 2023 Copyright: PandaCompany/OmarChaalan</h5>
+    </footer>
+  </body>
+</html>

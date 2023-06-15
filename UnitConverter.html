@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      header {
+        background-color: gray;
+        color: white;
+        display: inline-block;
+        width: 100%;
+        position: sticky;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: grey;
+        z-index: 1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: black;
+      }
+
+      footer {
+        background-color: grey;
+        position: sticky;
+        bottom: 0%;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+      }
+
+      fieldset {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+
+<header>
+  <h2 style="margin-left: 7.5px; display: inline-block; color: black">
+    My Website
+  </h2>
+  <h3 style="margin-left: 7.5px; display: inline-block; color: black">
+    <a href="MyWebsite.html" style="color: black; text-decoration: none"
+    >Home</a>
+  </h3>
+  <div class="dropdown">
+    <h3 style="margin-left: 7.5px; display: inline-block; color: white">
+      Link
+    </h3>
+    <div class="dropdown-content">
+      <a href="MyInformation.html">Personal Info</a>
+      <a href="SocialMedia.html">My Social Media</a>
+      <a href="UnitConverter.html">Converter</a>
+      <a href="DiceGame.html">Dice Game</a>
+    </div>
+  </div>
+</header>
+
+    <script src="UnitConverter.js"></script>
+  </head>
+
+  <body>
+    <fieldset style="text-align: center; width:37%">
+      <legend><h3>Unit Converter</h3></legend>
+      <p>
+        <h2>Temperature Converter</h2>
+        <input type="radio" name="conversion" value="temp" required>
+        <label for="">Fahrenheit To Celsius</label>
+        <br>
+        <h2>Distance Converter</h2>
+        <input type="radio" name="conversion" value="distance" required>
+        <label for="">Kilometers To Miles</label>
+        <br>
+        <h2>Height Converter</h2>
+        <input type="radio" name="conversion" value="height" required>
+        <label for="">Meters To Feet</label>
+      </p>
+    </fieldset>
+
+    <fieldset style="text-align: left; width:30%;">
+      <legend style="text-align: left;">Enter the value</legend>
+
+      <input type="text" id="inputConvert" required>
+      <button id="buttonConverter" onclick="convert()">Convert</button>
+      <div class="result" id="result"></div>
+    </fieldset>
+
+    <footer>
+      <h5>&copy; 2023 Copyright: PandaCompany/OmarChaalan</h5>
+    </footer>
+  </body>
+</html>

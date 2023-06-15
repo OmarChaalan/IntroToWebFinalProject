@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      header {
+        background-color: gray;
+        color: white;
+        display: inline-block;
+        width: 100%;
+        position: sticky;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: grey;
+        z-index: 1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: black;
+      }
+
+      footer {
+        background-color: grey;
+        position: sticky;
+        bottom: 0%;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .border {
+        width: 120px;
+        height: 45px;
+        border: solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        font-size: large;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: white;
+        background-color: rgb(78, 78, 78);
+        text-decoration: underline;
+      }
+
+      .border:hover {
+        background-color: rgb(78, 78, 78);
+      }
+    </style>
+
+    <header>
+      <h2 style="margin-left: 7.5px; display: inline-block; color: black">
+        My Website
+      </h2>
+      <h3 style="margin-left: 7.5px; display: inline-block; color: black">
+        <a href="MyWebsite.html" style="color: black; text-decoration: none"
+          >Home</a
+        >
+      </h3>
+      <div class="dropdown">
+        <h3 style="margin-left: 7.5px; display: inline-block; color: white">
+          Link
+        </h3>
+        <div class="dropdown-content">
+          <a href="MyInformation.html">Personal Info</a>
+          <a href="SocialMedia.html">My Social Media</a>
+          <a href="UnitConverter.html">Converter</a>
+          <a href="DiceGame.html">Dice Game</a>
+        </div>
+      </div>
+    </header>
+  </head>
+
+  <body>
+    <p
+      style="text-align: center; text-shadow: 0 0 10px yellow; font-size: 250%"
+    >
+      My Social Media:
+    </p>
+
+    <div class="container">
+      <div class="border">
+        <p><a href="">My LinkedIn</a></p>
+      </div>
+      <div class="border">
+        <p><a href="mailto:OmarChaalanSCHOOL@gmail.com">My Email</a></p>
+      </div>
+      <div class="border">
+        <p><a href="">My Instagram</a></p>
+      </div>
+    </div>
+
+    <footer>
+      <h5>&copy; 2023 Copyright: PandaCompany/OmarChaalan</h5>
+    </footer>
+  </body>
+</html>
